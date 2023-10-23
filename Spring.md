@@ -73,9 +73,9 @@ Business Logic 개발에 전념할 수 있게 해준다.
 
 # Spring의 구조
 
-![Untitled](Spring/images/Untitled.png)
+![Untitled]( images/Untitled.png)
 
-![Untitled](Spring/images/Untitled%201.png)
+![Untitled]( images/Untitled%201.png)
 
 ## POJO (Plain Old Java Object)
 
@@ -139,7 +139,7 @@ Business Logic 개발에 전념할 수 있게 해준다.
 
 # SpringFramework Module
 
-![Untitled](Spring/images/Untitled%202.png)
+![Untitled]( images/Untitled%202.png)
 
 1. `Spring Core` : 핵심 기능 제공, 주요 컴포넌트 : Bean Factory. Spring을 컨테이너로 만들었다.
 2. Spring Context:  Context module은 Spring을 Framework로 만들었다. application 생명주기 이벤트, 유효성 검증 등 제공
@@ -158,7 +158,7 @@ Business Logic 개발에 전념할 수 있게 해준다.
 - 먼저 Dependency Lookup 해서 컨테이너를 조회하고 Object를 Lookup 한다.
 - DI
     
-    ![Untitled](Spring/images/Untitled%203.png)
+    ![Untitled]( images/Untitled%203.png)
     
     - 컨테이너가 직접 의존 구조를 Object에 설정할 수 있게 지정.
     Object가 컨테이너 존재 여부 알 필요 없음
@@ -198,42 +198,42 @@ Business Logic 개발에 전념할 수 있게 해준다.
 - DI Container가 관리하는 객체를 Bean(빈) 이라고 하고, 이 빈들의 라이프사이클을 관리하는 의미로 빈팩토리(BeanFactory)라고 한다.
 - Bean Factory에 여러 기능을 추가해 ApplicationContext로 사용한다.
 
-![Untitled](Spring/images/Untitled%204.png)
+![Untitled]( images/Untitled%204.png)
 
 # 강한 결합
 
-![Untitled](Spring/images/Untitled%205.png)
+![Untitled]( images/Untitled%205.png)
 
 - **MemberService, AdminService 교체 or 내부코드 변경시 위의 클래스까지 수정해야 한다.**
 
 ## IoC 적용
 
-![Untitled](Spring/images/Untitled%206.png)
+![Untitled]( images/Untitled%206.png)
 
 - 다형성 적용 → 인터페이스 호출
 - 구현 클래스 교체가 용이하다.
 - But, 인터페이스 교체시 호출 클래스도 수정해야 한다.
 
-![Untitled](Spring/images/Untitled%207.png)
+![Untitled]( images/Untitled%207.png)
 
 ## 팩토리 방식 적용
 
-![Untitled](Spring/images/Untitled%208.png)
+![Untitled]( images/Untitled%208.png)
 
 - 팩토리가 구현 클래스 생성.
 - 인터페이스 변경 시 팩토리만 수정하면 된다. 호출클래스는 변경 하지 않아도 된다.
 - But, 클래스에 팩토리 호출하는 소스가 들어가야 한다 → 팩토리에 의존하네
 
-![Untitled](Spring/images/Untitled%209.png)
+![Untitled]( images/Untitled%209.png)
 
 ## Assembler 적용
 
-![Untitled](Spring/images/Untitled%2010.png)
+![Untitled]( images/Untitled%2010.png)
 
 - 팩토리 패턴의 장점 더한다. 어떠한 것에도 의존 X
 - 실행시점(Runtime) 에 클래스 간의 관계가 형성
 
-![Untitled](Spring/images/Untitled%2011.png)
+![Untitled]( images/Untitled%2011.png)
 
 Spring Container가 외부조립기(Assembler) 역할을 한다.
 
@@ -260,7 +260,7 @@ Spring Container가 외부조립기(Assembler) 역할을 한다.
 - Application Context 또는 BeanFactory가 IoC 적용하기 위해 사용하는 메타정보.
 - Bean 객체 생성, 구성할때 사용된다.
 
-![Untitled](Spring/images/Untitled%2012.png)
+![Untitled]( images/Untitled%2012.png)
 
 # 빈 생성 범위
 
@@ -270,7 +270,7 @@ Spring Container가 외부조립기(Assembler) 역할을 한다.
 - 컨테이너가 제공하는 모든 빈의 인스턴스는 동일하다
 - scope - prototype으로 설정하면 항상 새로운 인스턴스 반환
 
-![Untitled](Spring/images/Untitled%2013.png)
+![Untitled]( images/Untitled%2013.png)
 
 | Singleton | 컨테이너당 하나의 인스턴스 빈만 생성한다 (default) |
 | --- | --- |
@@ -278,13 +278,13 @@ Spring Container가 외부조립기(Assembler) 역할을 한다.
 | request | HTTP Request 별로 새로운 인스턴스 생성 |
 | Session | HTTP session 별로 새로운 인스턴스 생성 |
 
-![Untitled](Spring/images/Untitled%2014.png)
+![Untitled]( images/Untitled%2014.png)
 
 ## XML
 
 : xml 문서로 메타정보 기술. 단순, 사용하기 쉬움
 
-![Untitled](Spring/images/Untitled%2015.png)
+![Untitled]( images/Untitled%2015.png)
 
 ## Annotation
 
@@ -293,19 +293,19 @@ Spring Container가 외부조립기(Assembler) 역할을 한다.
 - Object Bean 스캐너로 빈 스캐닝을 통해 자동 등록.
 - 일반적으로 **클래스 이름을 빈의 아이디로 사용한다. (첫 글자만 소문자)**
 
-![Untitled](Spring/images/Untitled%2016.png)
+![Untitled]( images/Untitled%2016.png)
 
 - Annotation으로 빈 설정시 반드시 Component-scan을 설정해야 한다.
 
-![Untitled](Spring/images/Untitled%2017.png)
+![Untitled]( images/Untitled%2017.png)
 
-![Untitled](Spring/images/Untitled%2018.png)
+![Untitled]( images/Untitled%2018.png)
 
-![Untitled](Spring/images/Untitled%2019.png)
+![Untitled]( images/Untitled%2019.png)
 
 ## XML로 빈 객체 생성, 주입하기
 
-![Untitled](Spring/images/Untitled%2020.png)
+![Untitled]( images/Untitled%2020.png)
 
 name : 주입 받을 곳에서 호출 할 이름 설정
 
@@ -315,7 +315,7 @@ class : 주입할 클래스
 
 ## XML 사용
 
-![Untitled](Spring/images/Untitled%2021.png)
+![Untitled]( images/Untitled%2021.png)
 
 # 스프링 빈 의존 관계 설정
 
@@ -324,47 +324,47 @@ class : 주입할 클래스
 - 객체 또는 값을 생성자를 통해 주입 받는다.
 - <constructor-arg> : <bean> 의 하위태그로 설정한 bean 객체 or 값을 생성자를 통해 주입하도록 설정한다.
 
-![Untitled](Spring/images/Untitled%2022.png)
+![Untitled]( images/Untitled%2022.png)
 
-![Untitled](Spring/images/Untitled%2023.png)
+![Untitled]( images/Untitled%2023.png)
 
-![Untitled](Spring/images/Untitled%2024.png)
+![Untitled]( images/Untitled%2024.png)
 
 **name = “position” 처럼 설정해주어야 한다.**
 
-![Untitled](Spring/images/Untitled%2025.png)
+![Untitled]( images/Untitled%2025.png)
 
 argument 순서 지키지 않는 경우 
 
-![Untitled](Spring/images/Untitled%2026.png)
+![Untitled]( images/Untitled%2026.png)
 
 ## Property - XML이용!
 
 - `Setter Method` - Setter 를 통해서는 하나만 받을 수 있다
 
-![Untitled](Spring/images/Untitled%2027.png)
+![Untitled]( images/Untitled%2027.png)
 
-![Untitled](Spring/images/Untitled%2028.png)
+![Untitled]( images/Untitled%2028.png)
 
-![Untitled](Spring/images/Untitled%2029.png)
+![Untitled]( images/Untitled%2029.png)
 
-![Untitled](Spring/images/Untitled%2030.png)
+![Untitled]( images/Untitled%2030.png)
 
-![Untitled](Spring/images/Untitled%2031.png)
+![Untitled]( images/Untitled%2031.png)
 
-![Untitled](Spring/images/Untitled%2032.png)
+![Untitled]( images/Untitled%2032.png)
 
-![Untitled](Spring/images/Untitled%2033.png)
+![Untitled]( images/Untitled%2033.png)
 
-![Untitled](Spring/images/Untitled%2034.png)
+![Untitled]( images/Untitled%2034.png)
 
 **@Autowired**는 SpringFramework에 종속적이라는 것 기억!!
 
-![Untitled](Spring/images/Untitled%2035.png)
+![Untitled]( images/Untitled%2035.png)
 
 → 예전거임.
 
-![Untitled](Spring/images/Untitled%2036.png)
+![Untitled]( images/Untitled%2036.png)
 
 → 최근거. Framework 종속 X일때는 @Inject 사용 권장
 
@@ -372,39 +372,39 @@ argument 순서 지키지 않는 경우
 
 ### 1. 멤버변수에
 
-![Untitled](Spring/images/Untitled%2037.png)
+![Untitled]( images/Untitled%2037.png)
 
 ### 2. Setter 로
 
-![Untitled](Spring/images/Untitled%2038.png)
+![Untitled]( images/Untitled%2038.png)
 
 ## @Autowired 사용
 
 ### 1. 생성자에
 
-![Untitled](Spring/images/Untitled%2039.png)
+![Untitled]( images/Untitled%2039.png)
 
 - 동일한 타입의 bean이 여러개면 @Qualifier(”name”)으로 식별
 
 ### 2. 필드에
 
-![Untitled](Spring/images/Untitled%2040.png)
+![Untitled]( images/Untitled%2040.png)
 
 - 동일한 타입의 bean이 여러개면 @Qualifier(”name”)으로 식별
 
 ### 3. 일반 메서드에
 
-![Untitled](Spring/images/Untitled%2041.png)
+![Untitled]( images/Untitled%2041.png)
 
 - 동일한 타입의 bean이 여러개면 @Qualifier(”name”)으로 식별
 
 ## 빈 객체의 생성 단위(scope)
 
-![Untitled](Spring/images/Untitled%2042.png)
+![Untitled]( images/Untitled%2042.png)
 
 ## 스프링 빈의 생명주기
 
-![Untitled](Spring/images/Untitled%2043.png)
+![Untitled]( images/Untitled%2043.png)
 
 # AOP 개요
 
@@ -442,7 +442,7 @@ argument 순서 지키지 않는 경우
 
 ## AOP 구조
 
-![Untitled](Spring/images/Untitled%2044.png)
+![Untitled]( images/Untitled%2044.png)
 
 **핵심 관심사항에 공통 관심사항인 보안, 트랜잭션, 로깅 등을 어떻게 적용시킬 것인지 생각하는 것이 실력이다.**
 
@@ -483,11 +483,11 @@ argument 순서 지키지 않는 경우
 - Pointcut에 의해 결정된 타겟의 JoinPoint에 부가기능(Advice)를 삽입하는 과정
 - AOP의 핵심기능(Target)의 코드에 영향을 주지 않으면서 필요한 부가기능(Advice)를 추가할 수 있도록 해주는 핵심적인 처리 과정.
 
-![Untitled](Spring/images/Untitled%2045.png)
+![Untitled]( images/Untitled%2045.png)
 
-![Untitled](Spring/images/Untitled%2046.png)
+![Untitled]( images/Untitled%2046.png)
 
-![Untitled](Spring/images/Untitled%2047.png)
+![Untitled]( images/Untitled%2047.png)
 
 # Spring AOP 특징
 
@@ -497,14 +497,14 @@ argument 순서 지키지 않는 경우
 - Target을 감싸는 Proxy는 실행시간(Runtime)에 생성된다.
 - Proxy는 Advice를 Target 객체에 적용하면서 생성되는 객체이다.
 
-![Untitled](Spring/images/Untitled%2048.png)
+![Untitled]( images/Untitled%2048.png)
 
 ## 2. 프록시가 호출을 가로챈다 (Intercept)
 
 - Proxy는 Target 객체에 대한 호출을 가로챈 다음 Advice의 부가 기능 로직을 수행하고 난 후 Target의 핵심 기능 로직을 호출한다(전처리)
 - 또는 Target의 핵심 기능 로직method를 호출한 뒤에 부가기능(Advice)를 수행하는 경우도 있다. (후처리)
 
-![Untitled](Spring/images/Untitled%2049.png)
+![Untitled]( images/Untitled%2049.png)
 
 ## 3. Spring AOP는 method JoinPoint만 지원한다.
 
@@ -524,15 +524,15 @@ argument 순서 지키지 않는 경우
 
 1. `AOP namespace, XML Schema 추가`
 
-![Untitled](Spring/images/Untitled%2050.png)
+![Untitled]( images/Untitled%2050.png)
 
 1. aop namespace로 설정한다.
 
-![Untitled](Spring/images/Untitled%2051.png)
+![Untitled]( images/Untitled%2051.png)
 
 ### 설정태그
 
-![Untitled](Spring/images/Untitled%2052.png)
+![Untitled]( images/Untitled%2052.png)
 
 ### 설정파일<aop:aspect>
 
@@ -551,7 +551,7 @@ argument 순서 지키지 않는 경우
     - id: 식별자로 advice 태그에서 사용됨.
     - expression: pointcut 지정
 
-![Untitled](Spring/images/Untitled%2053.png)
+![Untitled]( images/Untitled%2053.png)
 
 ## 그 다음, POJO 기반으로 Advice Class를 작성한다.
 
@@ -575,7 +575,7 @@ argument 순서 지키지 않는 경우
 - return type: 리턴값 가져도 실제 advice 적용 과정에서 사용X → void 사용
 - argument : 없거나, 호출되는 메서드에 대한 정보 or 파라미터 정보. 필요하면 joinPoint
 
-![Untitled](Spring/images/Untitled%2054.png)
+![Untitled]( images/Untitled%2054.png)
 
 1. 빈 객체를 사용하는 코드에서 스프링이 생성한 AOP 프록시의 메서드 호출
 2. AOP 프록시는 <aop:before> 에서 지정한 메서드 호출
@@ -589,9 +589,9 @@ argument 순서 지키지 않는 경우
     - 없거나 JoinPoint. JoinPoint는 항상 첫 argument
     - 특정 객체 타입 값을 argument로 받을 수 있다.
 
-![Untitled](Spring/images/Untitled%2055.png)
+![Untitled]( images/Untitled%2055.png)
 
-![Untitled](Spring/images/Untitled%2056.png)
+![Untitled]( images/Untitled%2056.png)
 
 1. 빈 객체를 사용하는 코드에서 스프링이 생성한 AOP 프록시의 메서드 호출
 2. AOP 프록시는 실제 빈 객체의 메서드 호출(정상 실행)
@@ -605,9 +605,9 @@ argument 순서 지키지 않는 경우
     - 없거나 JoinPoint. JoinPoint는 항상 첫 argument
     - 특정 객체 타입 값을 argument로 받을 수 있다.
 
-![Untitled](Spring/images/Untitled%2057.png)
+![Untitled]( images/Untitled%2057.png)
 
-![Untitled](Spring/images/Untitled%2058.png)
+![Untitled]( images/Untitled%2058.png)
 
 1. 빈 객체를 사용하는 코드에서 스프링이 생성한 AOP 프록시의 메서드 호출
 2. AOP 프록시는 실제 빈 객체의 메서드 호출(exception 발생)
@@ -621,9 +621,9 @@ argument 순서 지키지 않는 경우
     - 없거나 JoinPoint. JoinPoint는 항상 첫 argument
     - 특정 객체 타입 값을 argument로 받을 수 있다.
 
-![Untitled](Spring/images/Untitled%2059.png)
+![Untitled]( images/Untitled%2059.png)
 
-![Untitled](Spring/images/Untitled%2060.png)
+![Untitled]( images/Untitled%2060.png)
 
 1. 빈 객체를 사용하는 코드에서 스프링이 생성한 AOP 프록시의 메서드 호출
 2. AOP 프록시는 실제 빈 객체의 메서드 호출(정상 실행, exception 발생 : `java의 finally와 같다`)
@@ -636,9 +636,9 @@ argument 순서 지키지 않는 경우
 - argment:
     - 반드시 “org.aspectj.lang.ProceedingJoinPoint”를 첫 argument로 지정.
 
-![Untitled](Spring/images/Untitled%2061.png)
+![Untitled]( images/Untitled%2061.png)
 
-![Untitled](Spring/images/Untitled%2062.png)
+![Untitled]( images/Untitled%2062.png)
 
 1. 빈 객체를 사용하는 코드에서 스프링이 생성한 AOP 프록시의 메서드 호출
 2. AOP 프록시는 <aop:around> 에서 지정한 메서드 호출
@@ -651,7 +651,7 @@ argument 순서 지키지 않는 경우
 - org.aspectj.lang 패키지에 있음.
 - 반드시 Aspect method의 첫 argument로 와야함.
 
-![Untitled](Spring/images/Untitled%2063.png)
+![Untitled]( images/Untitled%2063.png)
 
 ## @aspect Annotation을 이용한 AOP 구현
 
@@ -668,7 +668,7 @@ argument 순서 지키지 않는 경우
 - Around 를 제외한 나머지 method들은 첫 argument로 JoinPoint를 가질 수 있다.
 - Around Method는 argument 로 ProceedingJoinPoint를 가질 수 있다.
 
-![Untitled](Spring/images/Untitled%2064.png)
+![Untitled]( images/Untitled%2064.png)
 
 # MVC
 
@@ -710,7 +710,7 @@ argument 순서 지키지 않는 경우
 
 ## Model 2의 요청 흐름
 
-![Untitled](Spring/images/Untitled%2065.png)
+![Untitled]( images/Untitled%2065.png)
 
 ## Spring MVC 특징
 
@@ -751,9 +751,9 @@ DispatcherServlet은 하나 이상의 핸들러 매핑을 가질 수 있다.
 
 ## Spring MVC 요청 흐름
 
-![Untitled](Spring/images/Untitled%2066.png)
+![Untitled]( images/Untitled%2066.png)
 
-![Untitled](Spring/images/Untitled%2067.png)
+![Untitled]( images/Untitled%2067.png)
 
 1. DispatcherServlet이 요청을 수신한다.
 - 단일 front Controller Servlet
@@ -789,19 +789,19 @@ DispatcherServlet은 하나 이상의 핸들러 매핑을 가질 수 있다.
 4. Servlet이므로 1개 이상의 DispatcherServlet 설정 가능
 5. <load-on-startup>1</load-on-startup> 설정 시 WAS startup할때 초기화 작업 진행한다.
 
-![Untitled](Spring/images/Untitled%2068.png)
+![Untitled]( images/Untitled%2068.png)
 
-![Untitled](Spring/images/Untitled%2069.png)
+![Untitled]( images/Untitled%2069.png)
 
-![Untitled](Spring/images/Untitled%2070.png)
+![Untitled]( images/Untitled%2070.png)
 
-![Untitled](Spring/images/Untitled%2071.png)
+![Untitled]( images/Untitled%2071.png)
 
-![Untitled](Spring/images/Untitled%2072.png)
+![Untitled]( images/Untitled%2072.png)
 
-![Untitled](Spring/images/Untitled%2073.png)
+![Untitled]( images/Untitled%2073.png)
 
-![Untitled](Spring/images/Untitled%2074.png)
+![Untitled]( images/Untitled%2074.png)
 
 # Controller
 
@@ -812,21 +812,21 @@ DispatcherServlet은 하나 이상의 핸들러 매핑을 가질 수 있다.
 
 **이렇게 어노테이션의 사용을 장려한다.**
 
-![Untitled](Spring/images/Untitled%2075.png)
+![Untitled]( images/Untitled%2075.png)
 
-![Untitled](Spring/images/Untitled%2076.png)
+![Untitled]( images/Untitled%2076.png)
 
-![Untitled](Spring/images/Untitled%2077.png)
+![Untitled]( images/Untitled%2077.png)
 
 **`base-package에 설정된 package 내의 class 중 @Controller annotation이 적용된 클래스는 자동 스캔 대상이 된다.`**
 
 Controller에서 @RequestMapping 선언
 
-![Untitled](Spring/images/Untitled%2078.png)
+![Untitled]( images/Untitled%2078.png)
 
-![Untitled](Spring/images/Untitled%2079.png)
+![Untitled]( images/Untitled%2079.png)
 
-![Untitled](Spring/images/Untitled%2080.png)
+![Untitled]( images/Untitled%2080.png)
 
 ## 진짜 중요한 기능!!!
 
@@ -835,17 +835,17 @@ Controller에서 @RequestMapping 선언
     springMVC는 form에 입력한 data를 JavaBean 객체를 이용해서 전송할 수 있다.
     
 
-![Untitled](Spring/images/Untitled%2081.png)
+![Untitled]( images/Untitled%2081.png)
 
 **`이름이 같다면 알아서 맞춰서 넣어준다`**
 
 정말 엄청나게 편리하다!
 
-![Untitled](Spring/images/Untitled%2082.png)
+![Untitled]( images/Untitled%2082.png)
 
 ## **`@ModelAttribute를 사용하면 View에서 사용할 command 객체의 이름을 변경할 수 있다!!`**
 
-![Untitled](Spring/images/Untitled%2083.png)
+![Untitled]( images/Untitled%2083.png)
 
 **@RequestBody**
 
@@ -858,14 +858,14 @@ Controller에서 @RequestMapping 선언
 - Controller에서는 처리 결과를 보여줄 View 이름이나 객체 리턴
 DispatcherServlet은 View이름이나 View 객체를 이용하여 View 생성
 
-![Untitled](Spring/images/Untitled%2084.png)
+![Untitled]( images/Untitled%2084.png)
 
 - ViewResolver : 논리적 view와 실제 JSP 파일 mapping 한다.
     - servlet-context.xml
     
-    ![Untitled](Spring/images/Untitled%2085.png)
+    ![Untitled]( images/Untitled%2085.png)
     
-    ![Untitled](Spring/images/Untitled%2086.png)
+    ![Untitled]( images/Untitled%2086.png)
     
     3가지 경우 모두 가능하다.
     
@@ -875,13 +875,13 @@ DispatcherServlet은 View이름이나 View 객체를 이용하여 View 생성
 - 유형
     - return type이 Model이나 Map인 경우
 
-![Untitled](Spring/images/Untitled%2087.png)
+![Untitled]( images/Untitled%2087.png)
 
 ## redirect view
 
 - view 이름에 “redirect:”를 붙이면 지정한 페이지로 redirect 된다.
 
-![Untitled](Spring/images/Untitled%2088.png)
+![Untitled]( images/Untitled%2088.png)
 
 # Model
 
@@ -893,11 +893,11 @@ DispatcherServlet은 View이름이나 View 객체를 이용하여 View 생성
 - @RequestMapping method가 return 하는 ModelAndView
 - @ModelAttribute annotation이 적용된 method가 return 한 객체
 
-![Untitled](Spring/images/Untitled%2089.png)
+![Untitled]( images/Untitled%2089.png)
 
 ## ModelAndView 이용
 
-![Untitled](Spring/images/Untitled%2090.png)
+![Untitled]( images/Untitled%2090.png)
 
 ## @ModelAttribute 를 이용
 
@@ -906,15 +906,15 @@ DispatcherServlet은 View이름이나 View 객체를 이용하여 View 생성
 
 ## 요청 URL 매칭
 
-![Untitled](Spring/images/Untitled%2091.png)
+![Untitled]( images/Untitled%2091.png)
 
-![Untitled](Spring/images/Untitled%2092.png)
+![Untitled]( images/Untitled%2092.png)
 
-![Untitled](Spring/images/Untitled%2093.png)
+![Untitled]( images/Untitled%2093.png)
 
 # Spring Web Application의 동작 원리
 
-![Untitled](Spring/images/Untitled%2094.png)
+![Untitled]( images/Untitled%2094.png)
 
 ## 순서
 
